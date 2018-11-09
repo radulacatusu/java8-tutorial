@@ -1,0 +1,6 @@
+A AA 10
+B BB 15
+C CC 20
+D DD 25
+E EE 30
+F FF 10
