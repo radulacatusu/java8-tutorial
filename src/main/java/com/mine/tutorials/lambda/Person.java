@@ -1,20 +1,33 @@
 package com.mine.tutorials.lambda;
 
 
+import java.time.LocalDate;
+
 /**
  * @stefanl
  */
 public class Person {
 
-    public String firstName;
-    public String lastName;
-    public int age;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private LocalDate dayOfBirth;
 
     /**
      *
      */
     public Person() {
     }
+
+    /**
+     * @param firstName
+     * @param dayOfBirth
+     */
+    public Person(String firstName, LocalDate dayOfBirth) {
+        this.firstName = firstName;
+        this.dayOfBirth = dayOfBirth;
+    }
+
 
     /**
      * @param firstName
@@ -58,12 +71,21 @@ public class Person {
         this.age = age;
     }
 
+    public LocalDate getDayOfBirth() {
+        return dayOfBirth;
+    }
+
+    public void setDayOfBirth(LocalDate dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age='" + age + '\'' +
+                ", dayOfBirth='" + dayOfBirth + '\'' +
                 '}';
     }
 }
